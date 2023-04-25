@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git Fethcer</title>
+  </head>
+  <body>
+    <div id="Fetch_IDS"> </div>
+    <script>
+      fetch("https://www.treep.today/apis/payments/", {
+        method: "GET",
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+        // body: JSON.stringify({ a: 7, str: "Some string: &=&" }),
+      })
+        .then((res) => res.json())
+        .then((res) => {
+          console.log(res);
+
+          for (i = 0; i <= res.length; i++) {
+            console.log(res[i].body);
+            document.querySelector("#Fetch_IDS").innerHTML = res[i].body;
+          }
+        });
+    </script>
+  </body>
+</html>
