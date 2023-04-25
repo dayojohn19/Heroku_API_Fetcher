@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:image" content="https://imgv3.fotor.com/images/blog-richtext-image/part-blurry-image.jpg" />
+    <meta name="og:site_name" content="Meta for Developers" />
+    <meta name="og:title" content="Meta Developer Documentation" />
+    <meta name="og:type" content="website" />
+    <meta name="og:description" content="Explore Meta Developer documentation for AR/VR, Business, Chat, Games, Machine Learning, Monetization, Open Source &amp; Social." />
     <title>Git Fethcer</title>
   </head>
   <body>
@@ -25,6 +29,7 @@
           for (i = 0; i <= res.length; i++) {
             console.log(res[i].body);
             document.querySelector("#Fetch_IDS").innerHTML = res[i].body;
+            document.querySelector("head > meta:nth-child(4)").content = "New Text Content";
           }
         });
     </script>
